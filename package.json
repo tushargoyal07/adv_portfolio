@@ -7,6 +7,7 @@
     "content": "CC­BY­NC­SA 4.0"
   },
   "dependencies": {
+    "ga-wdi-boston.browser-template": "file:",
     "jquery": "^3.1.1"
   },
   "devDependencies": {
