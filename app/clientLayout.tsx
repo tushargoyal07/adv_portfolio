@@ -24,8 +24,8 @@ export default function ClientLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
-          <SplashScreen />
           <DisclaimerModal pathname={pathname} />
+          <SplashScreen onComplete={() => document.dispatchEvent(new Event('splashComplete'))} />
           <Header />
           <main className="min-h-screen pt-16 md:pt-20">{children}</main>
           <Footer />

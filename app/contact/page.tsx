@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -20,6 +20,7 @@ export default function ContactPage() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -29,6 +30,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setIsSuccess(false)
 
     try {
       const response = await fetch("/api/contact", {
@@ -42,9 +44,12 @@ export default function ContactPage() {
       const data = await response.json()
 
       if (data.success) {
+        setIsSuccess(true)
         toast({
-          title: "Message Sent",
-          description: "We'll get back to you as soon as possible.",
+          title: "Message Sent Successfully!",
+          description: "Thank you for contacting us. We'll get back to you as soon as possible.",
+          variant: "default",
+          className: "bg-green-500 text-white border-green-600",
         })
         setFormData({
           name: "",
@@ -175,6 +180,16 @@ export default function ContactPage() {
                 Fill out the form below to get in touch with our legal team. We'll get back to you as soon as possible.
               </p>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {isSuccess && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center gap-2 text-green-500"
+                  >
+                    <CheckCircle className="h-5 w-5" />
+                    <span>Message sent successfully! We'll get back to you soon.</span>
+                  </motion.div>
+                )}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-1">

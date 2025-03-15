@@ -3,16 +3,21 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
-export function SplashScreen() {
+interface SplashScreenProps {
+  onComplete?: () => void
+}
+
+export function SplashScreen({ onComplete }: SplashScreenProps) {
   const [show, setShow] = useState(true)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShow(false)
+      onComplete?.()
     }, 2500)
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [onComplete])
 
   if (!show) return null
 
@@ -22,7 +27,10 @@ export function SplashScreen() {
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
       transition={{ duration: 0.5, delay: 2 }}
-      onAnimationComplete={() => setShow(false)}
+      onAnimationComplete={() => {
+        setShow(false)
+        onComplete?.()
+      }}
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
@@ -50,4 +58,3 @@ export function SplashScreen() {
     </motion.div>
   )
 }
-

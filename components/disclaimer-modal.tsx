@@ -21,9 +21,26 @@ export function DisclaimerModal({ pathname }: DisclaimerModalProps) {
   const currentPathname = usePathname()
 
   useEffect(() => {
-    // Show disclaimer on every page/section load
-    setOpen(true)
-  }, [currentPathname]) // Trigger on pathname change
+    // Listen for splash screen completion
+    const handleSplashComplete = () => {
+      setTimeout(() => {
+        setOpen(true)
+      }, 500) // Show disclaimer 500ms after splash screen completes
+    }
+
+    document.addEventListener('splashComplete', handleSplashComplete)
+
+    return () => {
+      document.removeEventListener('splashComplete', handleSplashComplete)
+    }
+  }, [])
+
+  // Show disclaimer on navigation
+  useEffect(() => {
+    if (currentPathname !== pathname) {
+      setOpen(true)
+    }
+  }, [currentPathname, pathname])
 
   const handleAccept = () => {
     setOpen(false)

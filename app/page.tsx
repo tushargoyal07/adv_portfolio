@@ -163,10 +163,10 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <div className="bg-primary/10 px-4 py-2 rounded-full">
-                  <span className="font-semibold">BA.LLB</span>
+                  <span className="font-semibold text-primary">BA.LLB</span>
                 </div>
                 <div className="bg-primary/10 px-4 py-2 rounded-full">
-                  <span className="font-semibold">DCL</span>
+                  <span className="font-semibold text-primary">DCL</span>
                 </div>
               </div>
               <Link href="/about">
@@ -222,4 +222,3 @@ export default function Home() {
     </>
   )
 }
-

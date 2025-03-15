@@ -112,7 +112,7 @@ export default function AboutPage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>{item}</span>
+                    <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                   (item, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                      <span>{item}</span>
+                      <span className="text-gray-700">{item}</span>
                     </li>
                   ),
                 )}
@@ -210,4 +210,3 @@ export default function AboutPage() {
     </>
   )
 }
-
