@@ -17,7 +17,19 @@ export default function AboutPage() {
     <>
       {/* Hero Section */}
       <section className="relative py-24 bg-gray-900 text-white">
-        <div className="container px-4">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('/images/penImage.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundColor: "#1a1a1a",
+            backgroundBlendMode: "overlay",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40" />
+        </div>
+        <div className="container px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">About Us</h1>
             <p className="text-xl text-gray-300">
@@ -41,11 +53,10 @@ export default function AboutPage() {
               <div
                 className="absolute inset-0"
                 style={{
-                  backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2017.21.08_11f163de.jpg-nL2RzI3GWkGCErAyTHHSDjHA6Xyjc6.jpeg')`,
-                  backgroundSize: "contain",
+                  backgroundImage: `url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2070&auto=format&fit=crop')`,
+                  backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  backgroundColor: "#000",
                 }}
               />
             </motion.div>

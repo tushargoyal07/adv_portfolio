@@ -9,7 +9,9 @@ export function ContactSection() {
           <div className="flex items-start space-x-4">
             <MapPin className="h-6 w-6 text-primary shrink-0" />
             <p className="text-muted-foreground">
-              Hesrgatta main road, Sai convention hall right side ground floor, Bangalore - 560022
+            Hesaraghatta main road,
+Sai convention hall right side ground floor,
+Bangalore - 560057
             </p>
           </div>
           <div className="flex items-center space-x-4">

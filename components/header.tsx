@@ -40,12 +40,15 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 relative">
-                <div className="absolute inset-0 bg-white rounded-full flex items-center justify-center">
-                  {/* <svg viewBox="0 0 100 100" className="h-6 w-6">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="black" strokeWidth="8" />
-                    <rect x="35" y="20" width="30" height="60" fill="black" />
-                  </svg> */}
-                  <Image src="/favicon.ico" alt="Logo" width={32} height={32} className="h-6 w-6 rounded-full bg-transparent" />
+                <div className="absolute inset-0 bg-white rounded-full flex items-center justify-center overflow-hidden">
+                  <Image 
+                    src="/images/lawyer logo.jpg" 
+                    alt="Lawyer Logo" 
+                    width={32} 
+                    height={32} 
+                    className="h-full w-full object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <span className={`font-bold text-lg ${isScrolled ? "text-primary" : "text-white"}`}>
@@ -121,4 +124,3 @@ export function Header() {
     </header>
   )
 }
-

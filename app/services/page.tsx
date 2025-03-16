@@ -105,7 +105,17 @@ export default function ServicesPage() {
     <>
       {/* Hero Section */}
       <section className="relative py-24 bg-gray-900 text-white">
-        <div className="container px-4">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2070&auto=format&fit=crop')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        <div className="container px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">Our Services</h1>
             <p className="text-xl text-gray-300">Comprehensive legal solutions tailored to your specific needs</p>

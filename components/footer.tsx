@@ -61,7 +61,9 @@ export function Footer() {
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-1 text-primary" />
                 <p className="text-gray-400">
-                  Hesrgatta main road, Sai convention hall right side ground floor, Bangalore - 560022
+                Hesaraghatta main road,
+Sai convention hall right side ground floor,
+Bangalore - 560057
                 </p>
               </div>
               <div className="flex items-center">

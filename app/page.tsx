@@ -189,7 +189,6 @@ export default function Home() {
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  backgroundColor: "#000",
                 }}
               />
             </motion.div>

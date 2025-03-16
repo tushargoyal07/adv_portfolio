@@ -80,7 +80,19 @@ export default function ContactPage() {
     <>
       {/* Hero Section */}
       <section className="relative py-24 bg-gray-900 text-white">
-        <div className="container px-4">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url('/images/handshakeImage.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundColor: "#1a1a1a",
+            backgroundBlendMode: "overlay",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40" />
+        </div>
+        <div className="container px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl text-gray-300">Get in touch with our legal team for professional assistance</p>
@@ -104,7 +116,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-bold mb-2">Our Location</h3>
               <p className="text-gray-600">
-                Hesrgatta main road, Sai convention hall right side ground floor, Bangalore - 560022
+                Hesaraghatta main road, Sai convention hall right side ground floor, Bangalore - 560057
               </p>
               <a
                 href="https://maps.google.com/?q=13.05592,77.5076828"
@@ -255,31 +267,97 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Working Hours</h2>
               <div className="space-y-6">
                 <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium text-gray-900">Monday - Friday</span>
-                  <span className="text-gray-600">9:30 AM - 6:30 PM</span>
+                  <span className="font-medium text-gray-900">Monday - Saturday</span>
+                  <span className="text-gray-600">10:00 AM - 9:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-4">
-                  <span className="font-medium text-gray-900">Saturday</span>
-                  <span className="text-gray-600">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span className="font-medium text-gray-900">Sunday</span>
-                  <span className="text-gray-600">Closed</span>
+                  <span className="text-gray-600">10:00 AM - 8:00 PM</span>
+                </div>
+                <div className="text-gray-600 text-sm mt-4 space-y-2">
+                  <p className="flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V7z"/>
+                    </svg>
+                    Appointments available during working hours
+                  </p>
+                  <p className="flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    Prior appointment recommended for consultation
+                  </p>
+                  <p className="flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V17a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Emergency consultations available on request
+                  </p>
                 </div>
               </div>
 
               <div className="mt-12 bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Location Map</h3>
-                <div className="aspect-video rounded-lg overflow-hidden border border-gray-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6839977195!2d77.50768279999999!3d13.05592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzIxLjMiTiA3N8KwMzAnMjcuNyJF!5e0!3m2!1sen!2sin!4v1615972529000!5m2!1sen!2sin"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Office Location</h3>
+                <div className="space-y-3">
+                  <p className="flex items-start text-gray-600">
+                    <svg className="w-5 h-5 mr-3 mt-1 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>
+                      Hesaraghatta main road,<br />
+                      Sai convention hall right side ground floor,<br />
+                      Bangalore - 560057
+                    </span>
+                  </p>
+                  <p className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 mr-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <a href="mailto:info@example.com" className="hover:text-gray-900 transition-colors">
+                      info@example.com
+                    </a>
+                  </p>
+                  <p className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 mr-3 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <a href="tel:+919876543210" className="hover:text-gray-900 transition-colors">
+                      +91 98765 43210
+                    </a>
+                  </p>
+                  <p className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 mr-3 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                    <a href="https://wa.me/919876543210" className="hover:text-gray-900 transition-colors">
+                      WhatsApp
+                    </a>
+                  </p>
+                  <p className="flex items-center text-gray-600">
+                    <svg className="w-5 h-5 mr-3 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <a href="https://linkedin.com/in/rakesh-advocate" className="hover:text-gray-900 transition-colors">
+                      LinkedIn
+                    </a>
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Location Map</h3>
+                  <div className="aspect-video rounded-lg overflow-hidden border border-gray-200">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6839977195!2d77.50768279999999!3d13.05592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzIxLjMiTiA3N8KwMzAnMjcuNyJF!5e0!3m2!1sen!2sin!4v1615972529000!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
             </motion.div>
